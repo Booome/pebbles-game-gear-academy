@@ -1,0 +1,23 @@
+[package]
+name = "pebbles-game"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gstd = { git = "https://github.com/gear-tech/gear.git", tag = "v1.6.0" }
+pebbles-game-io.path = "io"
+rng.path = "rng"
+
+[build-dependencies]
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", tag = "v1.6.0" }
+pebbles-game-io.path = "io"
+rng.path = "rng"
+
+[dev-dependencies]
+gtest = { git = "https://github.com/gear-tech/gear.git", tag = "v1.6.0" }
+pebbles-game-io.path = "io"
+rng.path = "rng"
+
+[[test]]
+name = "basic"
+path = "test/basic.rs"
